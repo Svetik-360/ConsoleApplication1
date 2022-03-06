@@ -3,3 +3,4 @@ C:\Users\Podgu\OneDrive\Документы\Visual Studio 2012\Projects\ConsoleAp
 C:\Users\Podgu\OneDrive\Документы\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\Podgu\OneDrive\Документы\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Podgu\OneDrive\Документы\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Podgu\OneDrive\Документы\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

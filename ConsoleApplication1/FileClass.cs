@@ -46,7 +46,7 @@ namespace ConsoleApplication1
                 {
                     if (line.IndexOf(str) > -1)
                     {
-                        found = true;
+                        Console.WriteLine(line);
                         break;
                     }
                 }
