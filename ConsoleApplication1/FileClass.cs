@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
@@ -21,38 +18,41 @@ namespace ConsoleApplication1
             list = File.ReadAllLines(fileName).ToList();
         }
 
-        public void Add(string newString)
+        public void Add(string newString, string fileName)
         {
+            list.Clear();//очищаем список перед наполнением 
             list.Add(newString); //добавляем в список
             if (listChanged != null) listChanged(); //вызываем обработчик изменения списка
             File.WriteAllLines(fileName, list); //сохраняем файл
         }
-
-        public void Remove(int index)
+        /*
+        public void Remove(int index)//удаление
         {
             list.RemoveAt(index); //удаляем из списка
             if (listChanged != null) listChanged(); //вызываем обработчик изменения списка
             File.WriteAllLines(fileName, list);  //сохраняем файл
-        }
+        }*/
 
-        public void Search(String str)
+        public void Search(String str, String fileName)
         {
-            bool found = false;
-
-            using (StreamReader reader = new StreamReader("data.txt"))
+            using (StreamReader reader = new StreamReader(fileName))
             {
+                bool found = false;
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
                     if (line.IndexOf(str) > -1)
                     {
                         Console.WriteLine(line);
+                        found = true;
                         break;
                     }
                 }
+                if (found == false)
+                {
+                    Console.WriteLine("По запросу ничего не найдено.");
+                }
             }
-
-            Console.WriteLine("Found: {0}", found);
         }
     }
 }
